@@ -69,15 +69,23 @@ const AddressesTable = () => {
                 {address.street}, {address.city}, {address.state}, {address.zip}
               </td>
               <td className="px-2 md:px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <button
+                {/* <button
                   onClick={() => handleUpdate(address)}
                   className="text-green-600 hover:text-green-900 mr-3"
                 >
                   Update
+                </button> */}
+                <button
+                  type="button"
+                  onClick={() => handleUpdate(address)}
+                  className="inline-flex justify-center py-2 px-4 mr-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-500 hover:bg-green-700"
+                >
+                  Update
                 </button>
                 <button
+                  type="button"
                   onClick={() => handleDelete(address)}
-                  className="text-red-600 hover:text-red-900"
+                  className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-700"
                 >
                   Delete
                 </button>

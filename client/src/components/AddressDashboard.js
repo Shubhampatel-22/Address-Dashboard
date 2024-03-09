@@ -91,7 +91,7 @@ function AddressDashboard() {
         setNewAddress({ street: "", city: "", state: "", zip: "" });
         setTimeout(() => {
           window.location.reload();
-        }, 2000);
+        }, 1000);
       } else {
         toast.error("Failed to add address");
       }
