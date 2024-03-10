@@ -9,7 +9,7 @@ const getAddress = async (req, res) => {
 
   try {
     const addresses = await Address.find()
-      .sort({ createdAt: -1 })
+      .sort({ updatedAt: -1 })
       .limit(limit)
       .skip(skip);
     console.log(addresses);
@@ -20,6 +20,12 @@ const getAddress = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
+
+/**
+ * This function will add a new address
+ * @param {*} req
+ * @param {*} res
+ */
 
 const addAddress = async (req, res) => {
   try {
@@ -60,6 +66,11 @@ const addAddress = async (req, res) => {
   }
 };
 
+/**
+ * This will update the address of a user
+ * @param req - reuqest body
+ * @param res - response
+ */
 const updateAddress = async (req, res) => {
   try {
     const { street, city, state, zip } = req.body;

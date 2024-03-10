@@ -15,6 +15,4 @@ app.use(cookieParser());
 //routes declaration
 app.use("/api/v1/address", addressRouter);
 
-// http://localhost:8000/api/v1/users/register
-
 export { app };

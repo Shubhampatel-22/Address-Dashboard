@@ -115,7 +115,7 @@ function AddressDashboard() {
               className="block uppercase tracking-wide text-gray-700 text-md font-bold mb-2"
               htmlFor="grid-city"
             >
-              street
+              street <span className="text-red-700 text-md">*</span>
             </label>
             <input
               className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -134,7 +134,7 @@ function AddressDashboard() {
                 className="block uppercase tracking-wide text-gray-700 text-md font-bold mb-2"
                 htmlFor="grid-city"
               >
-                City
+                City <span className="text-red-700 text-md">*</span>
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -151,7 +151,7 @@ function AddressDashboard() {
                 className="block uppercase tracking-wide text-gray-700 text-md font-bold mb-2"
                 htmlFor="grid-state"
               >
-                State
+                State <span className="text-red-700 text-md">*</span>
               </label>
               <div className="relative">
                 <select
@@ -185,7 +185,7 @@ function AddressDashboard() {
                 className="block uppercase tracking-wide text-gray-700 text-md font-bold mb-2"
                 htmlFor="grid-zip"
               >
-                Zip
+                Zip <span className="text-red-700 text-md">*</span>
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"

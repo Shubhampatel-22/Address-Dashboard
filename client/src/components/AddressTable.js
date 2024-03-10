@@ -69,12 +69,6 @@ const AddressesTable = () => {
                 {address.street}, {address.city}, {address.state}, {address.zip}
               </td>
               <td className="px-2 md:px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                {/* <button
-                  onClick={() => handleUpdate(address)}
-                  className="text-green-600 hover:text-green-900 mr-3"
-                >
-                  Update
-                </button> */}
                 <button
                   type="button"
                   onClick={() => handleUpdate(address)}

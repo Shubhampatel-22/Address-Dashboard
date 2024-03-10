@@ -61,9 +61,41 @@ const UpdateAddressModal = ({ isOpen, onClose, address, refreshAddresses }) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  const validateAddress = () => {
+    if (
+      !formData.street.trim() ||
+      !formData.city.trim() ||
+      !formData.state.trim() ||
+      !formData.zip.trim()
+    ) {
+      toast.error("Please fill in all fields.");
+      return false;
+    }
+
+    if (formData.street.trim().length > 75) {
+      toast.error("Street name should be less then 75 character.");
+      return false;
+    }
+
+    if (formData.city.trim().length > 20) {
+      toast.error("City name should be less then 20 character.");
+      return false;
+    }
+
+    const zipCodePattern = /^[0-9]{6}$/;
+    if (!zipCodePattern.test(formData.zip)) {
+      toast.error("Please enter a valid ZIP code.");
+      return false;
+    }
+
+    return true;
+  };
   const baseURL = "http://localhost:8000/api/v1/address";
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateAddress()) {
+      return;
+    }
     try {
       const res = await axios.put(`${baseURL}/${address._id}`, formData);
       console.log(res.data);
